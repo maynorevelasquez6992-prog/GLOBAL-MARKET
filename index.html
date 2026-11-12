@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GLOBAL MARKET</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#081426;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:38px 16px;background:linear-gradient(145deg,#075184,#071425)}
+.logo{font-size:58px}
+h1{font-size:32px;letter-spacing:3px;margin:12px 0}
+.subtitle{color:#c5dff6}
+main{max-width:900px;margin:auto;padding:20px}
+input{width:100%;padding:16px;border:0;border-radius:12px;font-size:16px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+.category{background:#142b46;padding:18px 6px;text-align:center;border-radius:12px;font-size:14px}
+.category span{display:block;font-size:30px;margin-bottom:8px}
+button{width:100%;padding:17px;margin:7px 0;border:0;border-radius:12px;color:white;font-size:16px;font-weight:bold}
+.publish{background:#12a65a}
+.promote{background:#1876dc}
+h2{margin-top:30px}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.product{background:#142b46;border-radius:14px;overflow:hidden}
+.photo{height:130px;display:grid;place-items:center;background:#24476b;font-size:55px}
+.info{padding:13px}
+.price{color:#5de7a1;font-weight:bold}
+footer{text-align:center;padding:30px;color:#b9c8d8;font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="logo">🌎</div><h1>GLOBAL MARKET</h1><div class="subtitle">Tu mercado sin fronteras</div></header>
+<main>
+<input id="search" placeholder="🔍 ¿Qué estás buscando?" oninput="filterProducts()">
+<div class="categories">
+<div class="category"><span>🚗</span>Vehículos</div>
+<div class="category"><span>🏠</span>Propiedades</div>
+<div class="category"><span>📱</span>Tecnología</div>
+<div class="category"><span>🐄</span>Ganadería</div>
+<div class="category"><span>👕</span>Moda</div>
+<div class="category"><span>🛠️</span>Servicios</div>
+</div>
+<button class="publish" onclick="alert('Publicación gratuita: próximamente')">＋ Publicar anuncio gratis</button>
+<button class="promote" onclick="alert('Promociones desde US$1 al día: próximamente')">🚀 Promocionar desde US$1/día</button>
+<h2>Explorar anuncios</h2>
+<div class="products">
+<div class="product" data-name="camion volvo"><div class="photo">🚛</div><div class="info">Camión Volvo<br><span class="price">Consultar precio</span></div></div>
+<div class="product" data-name="ganado bovino"><div class="photo">🐄</div><div class="info">Ganado bovino<br><span class="price">Consultar precio</span></div></div>
+<div class="product" data-name="telefono movil"><div class="photo">📱</div><div class="info">Teléfono móvil<br><span class="price">Consultar precio</span></div></div>
+<div class="product" data-name="propiedad terreno"><div class="photo">🏡</div><div class="info">Propiedades<br><span class="price">Consultar precio</span></div></div>
+</div>
+</main>
+<footer>GLOBAL MARKET · Prototipo de demostración<br>Comisión prevista del 5 % para pagos gestionados por GLOBAL MARKET.</footer>
+<script>
+function filterProducts(){
+let q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.product').forEach(p=>{
+p.style.display=p.dataset.name.includes(q)?'':'none';
+});
+}
+</script>
+</body>
+</html>
