@@ -1,2 +1,2 @@
 # OMNIMARK
-Global Market plataforma internacional de Compra Ventas
+OMNIMARK plataforma internacional de Compra Ventas
